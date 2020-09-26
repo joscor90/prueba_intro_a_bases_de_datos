@@ -46,3 +46,17 @@ INSERT INTO categorias(id, nombre, descripcion) VALUES (1, 'computacion', 'cosas
 -- 8 productos
 
 INSERT INTO productos(id, nombre, descripcion, valor_unitario, categoria) VALUES (1, 'mouse', 'un mouse para pc', 200, 1), (2, 'teclado', 'teclado para pc', 400, 1), (3, 'monitor', 'monitor para pc', 700, 1), (4, 'gorro', 'gorro de lana', 120, 2), (5, 'polera', 'polera veraniega', 150, 2), (6, 'zapatillas', 'zapatillas deportivas', 250, 2), (7, 'martillo', 'martillo de hierro', 50, 3), (8, 'sierra', 'sierra muy afilada', 100, 3);
+
+-- 10 fechas para las facturas
+
+INSERT INTO fechas(id, fecha) VALUES (1, '2020-01-01'), (2, '2020-01-02'), (3, '2020-01-03'), (4, '2020-01-04'), (5, '2020-01-05'), (6, '2020-01-06'), (7, '2020-01-07'), (8, '2020-01-08'), (9, '2020-01-09'), (10, '2020-01-10');
+
+-- 10 facturas de acuerdo a lo siguiente: 
+-- 2 para el cliente 1, con 2 y 3 productos
+-- 3 para el cliente 2, con 3, 2 y 3 productos
+-- 1 para el cliente 3, con 1 producto
+-- 4 para el cliente 4, con 2, 3, 4 y 1 producto
+
+INSERT INTO facturas(numero_factura, fecha, subtotal, cliente) VALUES (1, 1, 600, 1), (2, 2, 1090, 1), (3, 3, 270, 2), (4, 4, 250, 2), (5, 4, 600, 2), (6, 5, 300, 3), (7, 5, 600, 4), (8, 6, 490, 4), (9, 7, 600, 4), (10, 7, 150, 4);
+
+-- Añadiendo el detalle de la compra para cada factura en la tabla "factura_producto"
