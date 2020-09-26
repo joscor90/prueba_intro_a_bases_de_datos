@@ -69,3 +69,7 @@ INSERT INTO factura_producto(id, factura_id, producto_id, cantidad, valor_total)
 
 SELECT cliente FROM facturas ORDER BY subtotal DESC LIMIT 1;
 
+-- ¿Que cliente pagó sobre 100 de monto?
+
+SELECT cliente FROM facturas WHERE subtotal > 100 GROUP BY cliente ORDER BY cliente; 
+
