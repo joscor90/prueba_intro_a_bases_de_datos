@@ -1,3 +1,5 @@
+-- CREACIÓN DE BASE DE DATOS Y TABLAS
+
 -- Creación de base de datos "prueba"
 CREATE DATABASE prueba;
 
@@ -20,4 +22,8 @@ CREATE TABLE facturas(numero_factura INT NOT NULL UNIQUE, fecha INT NOT NULL, su
 -- Creación de tabla "categorias"
 
 CREATE TABLE categorias(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, descripcion VARCHAR(200), PRIMARY KEY (id));
+
+-- Creación de tabla "productos"
+
+CREATE TABLE productos(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, descripcion VARCHAR(200), valor_unitario INT NOT NULL, categoria INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (categoria) REFERENCES categorias(id));
 
