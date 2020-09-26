@@ -64,3 +64,8 @@ INSERT INTO facturas(numero_factura, fecha, subtotal, cliente) VALUES (1, 1, 600
 INSERT INTO factura_producto(id, factura_id, producto_id, cantidad, valor_total) VALUES (1, 1, 1, 1, 200), (2, 1, 2, 1, 400), (3, 2, 3, 1, 700), (4, 2, 5, 1, 150), (5, 2, 4, 2, 240), (6, 3, 7, 1, 50), (7, 3, 8, 1, 100), (8, 3, 4, 1, 120), (9, 4, 5, 1, 150), (10, 4, 7, 2, 100), (11, 5, 6, 1, 250), (12, 5, 1, 1, 200), (13, 5, 7, 3, 150), (14, 6, 5, 2, 300), (15, 7, 2, 1, 400), (16, 7, 1, 1, 200), (17, 8, 4, 2, 240), (18, 8, 5, 1, 150), (19, 8, 8, 1, 100), (20, 9, 8, 1, 100), (21, 9, 7, 1, 50), (22, 9, 6, 1, 250), (23, 9, 1, 1, 200), (24, 10, 5, 1, 150);
 
 -- CONSULTAS
+
+-- ¿Que cliente realizó la compra más cara?
+
+SELECT cliente FROM facturas ORDER BY subtotal DESC LIMIT 1;
+
