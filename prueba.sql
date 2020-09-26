@@ -27,3 +27,6 @@ CREATE TABLE categorias(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, des
 
 CREATE TABLE productos(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, descripcion VARCHAR(200), valor_unitario INT NOT NULL, categoria INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (categoria) REFERENCES categorias(id));
 
+-- Creación de tabla "factura_producto"
+
+CREATE TABLE factura_producto(id INT NOT NULL UNIQUE, factura_id INT NOT NULL, producto_id INT NOT NULL, cantidad INT NOT NULL, valor_total INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (factura_id) REFERENCES facturas(numero_factura), FOREIGN KEY (producto_id) REFERENCES productos(id));
