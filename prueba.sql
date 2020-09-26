@@ -36,3 +36,9 @@ CREATE TABLE factura_producto(id INT NOT NULL UNIQUE, factura_id INT NOT NULL, p
 -- 5 clientes
 
 INSERT INTO direcciones(id, latitud, longitud) VALUES (1, 1.1, 1.2), (2, 1.2, 1.3), (3, 1.3, 1.4), (4, 1.4, 1.5), (5, 1.5, 1.6);
+
+INSERT INTO clientes(id, nombre, rut, direccion) VALUES (1, 'Jose', 111111111, 1), (2, 'Romina', 222222222, 2), (3, 'Diego', 333333333, 3), (4, 'Sebastian', 444444444, 4), (5, 'Eva', 555555555, 5);
+
+-- 3 categorías
+
+INSERT INTO categorias(id, nombre, descripcion) VALUES (1, 'computacion', 'cosas de computacion'), (2, 'ropa', 'cosas para vestir'), (3, 'herramientas', 'cosas para armar y desarmar');
