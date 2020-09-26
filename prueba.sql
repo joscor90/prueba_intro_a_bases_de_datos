@@ -73,3 +73,6 @@ SELECT cliente FROM facturas ORDER BY subtotal DESC LIMIT 1;
 
 SELECT cliente FROM facturas WHERE subtotal > 100 GROUP BY cliente ORDER BY cliente; 
 
+-- ¿Cuantos clientes han comprado el producto 6? 
+
+SELECT COUNT(DISTINCT cliente) FROM facturas AS f INNER JOIN factura_producto AS fp ON f.numero_factura = fp.factura_id WHERE producto_id = 6;
