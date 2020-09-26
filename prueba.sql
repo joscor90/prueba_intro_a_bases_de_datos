@@ -13,3 +13,7 @@ CREATE TABLE clientes(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, rut I
 
 CREATE TABLE fechas(id INT NOT NULL UNIQUE, fecha DATE NOT NULL, PRIMARY KEY (id));
 
+-- Creación de tabla "facturas"
+
+CREATE TABLE facturas(numero_factura INT NOT NULL UNIQUE, fecha INT NOT NULL, subtotal INT NOT NULL, cliente INT NOT NULL, PRIMARY KEY (numero_factura), FOREIGN KEY (fecha) REFERENCES fechas(id), FOREIGN KEY (cliente) REFERENCES clientes(id));
+
