@@ -30,3 +30,9 @@ CREATE TABLE productos(id INT NOT NULL UNIQUE, nombre VARCHAR(50) NOT NULL, desc
 -- Creación de tabla "factura_producto"
 
 CREATE TABLE factura_producto(id INT NOT NULL UNIQUE, factura_id INT NOT NULL, producto_id INT NOT NULL, cantidad INT NOT NULL, valor_total INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (factura_id) REFERENCES facturas(numero_factura), FOREIGN KEY (producto_id) REFERENCES productos(id));
+
+-- INSERCIÓN DE VALORES EN LA BASE DE DATOS
+
+-- 5 clientes
+
+INSERT INTO direcciones(id, latitud, longitud) VALUES (1, 1.1, 1.2), (2, 1.2, 1.3), (3, 1.3, 1.4), (4, 1.4, 1.5), (5, 1.5, 1.6);
