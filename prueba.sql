@@ -42,3 +42,7 @@ INSERT INTO clientes(id, nombre, rut, direccion) VALUES (1, 'Jose', 111111111, 1
 -- 3 categorías
 
 INSERT INTO categorias(id, nombre, descripcion) VALUES (1, 'computacion', 'cosas de computacion'), (2, 'ropa', 'cosas para vestir'), (3, 'herramientas', 'cosas para armar y desarmar');
+
+-- 8 productos
+
+INSERT INTO productos(id, nombre, descripcion, valor_unitario, categoria) VALUES (1, 'mouse', 'un mouse para pc', 200, 1), (2, 'teclado', 'teclado para pc', 400, 1), (3, 'monitor', 'monitor para pc', 700, 1), (4, 'gorro', 'gorro de lana', 120, 2), (5, 'polera', 'polera veraniega', 150, 2), (6, 'zapatillas', 'zapatillas deportivas', 250, 2), (7, 'martillo', 'martillo de hierro', 50, 3), (8, 'sierra', 'sierra muy afilada', 100, 3);
